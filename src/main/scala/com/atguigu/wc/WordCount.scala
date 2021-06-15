@@ -5,7 +5,7 @@ import org.apache.flink.api.scala._
 object WordCount {
   def main(args: Array[String]): Unit = {
     val env = ExecutionEnvironment.getExecutionEnvironment
-    val inputDate = "E:\\idea_workspace\\src\\main\\resources\\hello.txt"
+    val inputDate = "F:\\git_workspace\\FlinkStudy\\src\\main\\resources\\hello.txt"
     val lines = env.readTextFile(inputDate)
     val wordCount = lines.flatMap(_.split(" "))
       .map((_,1))
